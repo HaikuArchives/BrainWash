@@ -14,7 +14,7 @@ NAME= BrainWash
 #	SHARED:	Shared library or add-on
 #	STATIC:	Static library archive
 #	DRIVER: Kernel Driver
-TYPE= APP
+TYPE= SHARED
 
 #	specify the source files to use
 #	full paths or paths relative to the makefile can be included
@@ -80,7 +80,7 @@ WARNINGS = NONE
 #	specify whether image symbols will be created
 #	so that stack crawls in the debugger are meaningful
 #	if TRUE symbols will be created
-SYMBOLS = TRUE
+SYMBOLS = 
 
 #	specify debug settings
 #	if TRUE will allow application to be run from
@@ -94,6 +94,7 @@ COMPILER_FLAGS =
 LINKER_FLAGS =
 
 
-## include the makefile-engine
-include /boot/develop/etc/makefile-engine
-
+## Include the Makefile-Engine
+DEVEL_DIRECTORY := \
+	$(shell findpaths -r "makefile_engine" B_FIND_PATH_DEVELOP_DIRECTORY)
+include $(DEVEL_DIRECTORY)/etc/makefile-engine

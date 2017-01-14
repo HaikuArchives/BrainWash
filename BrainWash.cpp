@@ -1,27 +1,15 @@
 // a ScreenSaver module by Stephan Assmus, Ingo Weinhold
 
-#include <app/Application.h>
-#include <interface/Window.h>
-#include <interface/Screen.h>
-#include <interface/Alert.h>
-#include <interface/View.h>
-#include <interface/TextView.h>
-#include <interface/StringView.h>
-#include <interface/Slider.h>
-#include <interface/MenuItem.h>
-#include <interface/MenuBar.h>
-#include <interface/MenuField.h>
-#include <interface/TabView.h>
-#include <game/WindowScreen.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include "BrainWash.h"
-#include "Functions.h"
 #include "Dimensions.h"
+#include "Functions.h"
 #include "Threads.h"
+#include <math.h>
+#include <PopUpMenu.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 extern "C" { 
 _EXPORT BScreenSaver *instantiate_screen_saver(BMessage *msg, image_id id); 
@@ -113,7 +101,7 @@ class ScreenResMenuField : public BMenuField
 public:
 	ScreenResMenuField(BRect frame, const char *label, uint32 res,
 					   uint32 *target_value = 0)
-		: BMenuField(frame, 0, label, new BPopUpMenu("resolution"))
+		: BMenuField(frame, NULL, label, new BPopUpMenu("resolution"))
 	{
 		this->target_value = target_value;
 		BMenu *menu = Menu();
