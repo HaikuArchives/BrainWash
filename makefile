@@ -29,7 +29,8 @@ SRCS= BrainWash.cpp Dimensions.cpp Threads.cpp Calculation.cpp Functions.cpp \
 		
 #	specify the resource files to use
 #	full path or a relative path to the resource file can be used.
-RSRCS= BrainWash.rsrc
+RDEFS= BrainWash.rdef
+RSRCS=
 
 #	specify additional libraries to link against
 #	there are two acceptable forms of library specifications
@@ -41,8 +42,7 @@ RSRCS= BrainWash.rsrc
 #		naming scheme you need to specify the path to the library
 #		and it's name
 #		library: my_lib.a entry: my_lib.a or path/my_lib.a
-LIBS= be game _APP_
-#LIBS= be game
+LIBS= be game
 		
 #	specify additional paths to directories following the standard
 #	libXXX.so or libXXX.a naming scheme.  You can specify full paths

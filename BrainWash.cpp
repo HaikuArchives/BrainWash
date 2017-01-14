@@ -1,15 +1,27 @@
 // a ScreenSaver module by Stephan Assmus, Ingo Weinhold
 
+#include <Alert.h>
+#include <math.h>
+#include <MenuItem.h>
+#include <MenuBar.h>
+#include <MenuField.h>
+#include <PopUpMenu.h>
+#include <Screen.h>
+#include <Slider.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <StringView.h>
+#include <TabView.h>
+#include <TextView.h>
+#include <unistd.h>
+#include <View.h>
+#include <Window.h>
+#include <WindowScreen.h>
 #include "BrainWash.h"
 #include "Dimensions.h"
 #include "Functions.h"
 #include "Threads.h"
-#include <math.h>
-#include <PopUpMenu.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 
 extern "C" { 
 _EXPORT BScreenSaver *instantiate_screen_saver(BMessage *msg, image_id id); 
