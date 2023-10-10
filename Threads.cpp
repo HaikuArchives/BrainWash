@@ -250,13 +250,13 @@ void Function::Init()
 	// empty prelist
 	while (PreCalc *item = (PreCalc *)prelist->ItemAt(0))
 	{
-		prelist->RemoveItem((long)0);
+		prelist->RemoveItem((int32)0);
 		delete item;
 	}
 	// empty postlist
 	while (PostCalc *item = (PostCalc *)postlist->ItemAt(0))
 	{
-		postlist->RemoveItem((long)0);
+		postlist->RemoveItem((int32)0);
 		delete item;
 	}
 	// precalc functions
