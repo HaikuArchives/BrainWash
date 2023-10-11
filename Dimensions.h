@@ -9,7 +9,7 @@
 // the possible resolutions
 extern uint32 color_spaces[];
 // the names of the resolutions
-extern char *color_space_names[];
+extern const char *color_space_names[];
 // the number of color spaces
 extern size_t color_spaces_count;
 
