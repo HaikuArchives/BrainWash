@@ -403,6 +403,7 @@ status_t BrainWashSaver::SaveState(BMessage *state) const
 	state->AddInt32(drawing_speed_name, settings->drawing_speed);
 	state->AddInt32(screen_resolution_name,
 					(int32)settings->screen_resolution);
+	return B_OK;
 }
 
 
@@ -411,4 +412,5 @@ BScreenSaver *instantiate_screen_saver(BMessage *msg, image_id id)
 {
 	return new BrainWashSaver(msg, id);
 }
+
 
