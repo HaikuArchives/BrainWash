@@ -14,7 +14,7 @@ uint32 color_spaces[] =
 };
 
 // the names of the resolutions
-char *color_space_names[] =
+const char *color_space_names[] =
 {
 	"640x480",
 	"800x600",
